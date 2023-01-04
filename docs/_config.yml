@@ -30,8 +30,9 @@ twitter_username: jrsmata
 github_username:  hourglasseye
 
 # Build settings
-theme: midnight
+theme: pages-themes/midnight@v0.2.0
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
 
 # Exclude from processing.
