@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Delphyq"
+image: /images/delphyq.jpg
+blurb: "Real-time tactics game with pause mechanics that allow you to execute handplaced strategies."
+tags:
+- Combat Tactics
+- Steam
+- 3D
+- C#
+- Unity
+---
