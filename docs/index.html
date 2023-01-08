@@ -2,36 +2,57 @@
 layout: default
 ---
 
+<style>
+  .card-image {
+    position: relative;
+  }
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s ease;
+  }
+  .card:hover .image-overlay {
+    opacity: 1;
+  }
+</style>
 <div class="home py-4 py-md-5">
   <div class="row">
     {% for post in paginator.posts %}   
       <div class="col-12 col-md-6 col-lg-4">
        <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
-        <div class="card rounded bg-light overflow-hidden">  
-          <div class="image">
-            <div class="card-header text-center">{{ post.title }}</div>
+        <div class="card rounded bg-light overflow-hidden">
+          <div class="card-header text-center">{{ post.title }}</div>
+          <div class="card-image">
             {% if post.image %}
-            <img src="{{post.image | relative_url}}" alt="{{post.title}}">
+            <img class="card-img-top" src="{{post.image | relative_url}}" alt="{{post.title}}">
             {% endif %}
-            <div class="card-body">
-              <!--h2 class="card-title text-center">{{ post.title | truncate: 25 }}</h2-->
-              <h6 class="card-subtitle text-muted">{{ post.blurb }}</h6>
-              <p class="p-0 my-1 mx-0 text-right">
-                <span class="post-meta">
-                  <small>{{ post.date | date: "%b %-d, %Y" }}</small>
-                </span>
-              </p>
-              <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
-              {% for tag in post.tags %}
-                <span class="badge badge-dark">{{ tag }}</span>
-              {% endfor %}
-            </div>
-            <!--div class="card-footer text-muted text-center">
-            </div-->
+            {% if post.anim %}
+            <img class="image-overlay" src="{{post.anim | relative_url}}" alt="{{post.title}}">
+            {% endif %}
+          </div>
+          <div class="card-body">
+            <!--h2 class="card-title text-center">{{ post.title | truncate: 25 }}</h2-->
+            <h6 class="card-subtitle text-muted">{{ post.blurb }}</h6>
+            <p class="p-0 my-1 mx-0 text-right">
+              <span class="post-meta">
+                <small>{{ post.date | date: "%b %-d, %Y" }}</small>
+              </span>
+            </p>
+            <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
+            {% for tag in post.tags %}
+              <span class="badge badge-dark">{{ tag }}</span>
+            {% endfor %}
           </div>
         </div>
       </a>
       </div>
     {% endfor %}
+    </div>
   </div>
 </div> 
