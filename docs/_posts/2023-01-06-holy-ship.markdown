@@ -2,6 +2,7 @@
 layout: post
 title: "Holy Ship!"
 image: /images/holy-ship.jpg
+anim: /images/holy-ship.gif
 tags:
 - Idle RPG
 - Mobile
