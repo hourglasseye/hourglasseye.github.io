@@ -6,6 +6,21 @@ layout: default
   .card-image {
     position: relative;
   }
+  .accolade {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    width: 30%;
+    height: auto;
+    -webkit-filter: drop-shadow(1px 0 0 white)
+            drop-shadow(0 1px 0 white)
+            drop-shadow(-1px 0 0 white)
+            drop-shadow(0 -1px 0 white);
+    filter: drop-shadow(1px 0 0 white)
+            drop-shadow(0 1px 0 white)
+            drop-shadow(-1px 0 0 white)
+            drop-shadow(0 -1px 0 white);
+  }
   .image-overlay {
     position: absolute;
     top: 0;
@@ -26,11 +41,14 @@ layout: default
     {% for post in paginator.posts %}
       <div class="col-12 col-md-6 col-lg-4">
        <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
-        <div class="card rounded bg-light overflow-hidden">
+        <div class="card rounded overflow-hidden">
           <!--div class="card-header text-center">{{ post.title }}</div-->
           <div class="card-image">
             {% if post.image %}
             <img class="card-img-top" src="{{post.image | relative_url}}" alt="{{post.title}}">
+            {% endif %}
+            {% if post.accolade %}
+            <img class="accolade" src="{{post.accolade}}">
             {% endif %}
             {% if post.anim %}
             <img class="image-overlay" src="{{post.anim | relative_url}}" alt="{{post.title}}">
