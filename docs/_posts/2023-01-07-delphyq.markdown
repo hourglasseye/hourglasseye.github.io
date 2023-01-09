@@ -4,6 +4,9 @@ title: "Delphyq"
 image: /images/delphyq.jpg
 anim: /images/delphyq.gif
 blurb: "Real-time tactics game with pause mechanics that allow you to execute handplaced strategies."
+role: "Senior Game Developer"
+company: "Dusk Wave Arts"
+year: 2021
 tags:
 - Combat Tactics
 - Steam

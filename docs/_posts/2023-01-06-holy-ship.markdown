@@ -3,8 +3,12 @@ layout: post
 title: "Holy Ship!"
 image: /images/holy-ship.jpg
 anim: /images/holy-ship.gif
+blurb: An idle game with incremental progression and one-handed gameplay.
+role: "Senior Game Engineer"
+company: "Altitude Games"
+year: 2018
 tags:
-- Idle RPG
+- Idle Game
 - Mobile
 - 3D
 - C#
