@@ -9,7 +9,7 @@ company: "Gonzo Games"
 year: 2014
 tags:
 - Puzzle Arcade
-- Mobile
+- Steam
 - 3D
 - C#
 - Unity

@@ -33,6 +33,7 @@ github_username:  hourglasseye
 remote_theme: sharu725/cards
 plugins:
   - jekyll-feed
+  - jemoji
 
 paginate: 6
 future: true
