@@ -30,7 +30,7 @@ twitter_username: jrsmata
 github_username:  hourglasseye
 
 # Build settings
-remote_theme: sharu725/cards
+# remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
   - jemoji
