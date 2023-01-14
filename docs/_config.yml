@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Justin Richard S. Mata
+title: Justin Richard S. Mata's Portfolio
 email: justinrichardmata@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -30,10 +30,8 @@ twitter_username: jrsmata
 github_username:  hourglasseye
 
 # Build settings
-# remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
-  - jemoji
 
 paginate: 6
 future: true

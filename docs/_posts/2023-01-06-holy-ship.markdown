@@ -4,14 +4,19 @@ title: "Holy Ship!"
 image: /images/holy-ship.jpg
 anim: /images/holy-ship.gif
 accolade: /images/imga_sea_best_quickplay_3rd.png
-blurb: An idle game with incremental progression and one-handed gameplay.
 role: "Senior Game Engineer"
 company: "Altitude Games"
 year: 2018
 tags:
 - Idle Game
-- Mobile
 - 3D
 - C#
-- Unity
+- <i class="bi bi-unity"></i> Unity
+links:
+-
+  icon: google-play
+  label: Store Page
+  url: https://play.google.com/store/apps/details?id=com.altitude.holyship
 ---
+
+An idle game with incremental progression and one-handed gameplay.
