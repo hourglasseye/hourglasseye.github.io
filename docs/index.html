@@ -51,14 +51,14 @@ layout: default
   }
 </style>
 <nav class="navbar fixed-top bg-dark-subtle">
-  <div class="container-fluid">
+  <div class="container-xl">
     <a class="navbar-brand" href="#"><i class="bi bi-controller fs-3"></i> {{ site.title }}</a>
   </div>
 </nav>
-<div class="container-fluid">
+<div class="container-xl">
   {% for post in paginator.posts %}
   <div class="row entry mb-3">
-    <div class="col-lg-4">
+    <div class="col-sm-4">
       <div class="entry-image-container">
         <img src="{{post.image | relative_url}}" class="img-fluid entry-image">
         <img src="{{post.accolade | relative_url}}" class="img-fluid entry-accolade">
@@ -72,15 +72,15 @@ layout: default
         {% endif %}
       </div>
     </div>
-    <div class="col-lg-8">
+    <div class="col-sm-8">
       <h4 class="pt-1">{{post.title}}</h4>
-      <small class="text-muted">Released {{post.year}}</small>
-      <div><i class="bi bi-person-vcard"></i> <strong>{{post.role}}</strong> at {{post.company}}</div>
+      <div><i class="bi bi-calendar4-event"></i> Released {{post.year}}</div>
+      <div><i class="bi bi-briefcase"></i> <strong>{{post.role}}</strong> at {{post.company}}</div>
       <div class="entry-content py-2">
         {{post.content}}
       </div>
       <div class="hstack gap-3 py-2">
-        <div>Links <i class="bi bi-link-45deg"></i>:</div>
+        <small><i class="bi bi-link-45deg"></i> Links:</small>
       {% for link in post.links %}
         <a href="{{ link.url }}" class="link-secondary text-decoration-none pe-2"><i class="bi bi-{{ link.icon | default: "link-45deg" }}" style="color:ghostwhite"></i> {{ link.label }}</a>
       {% endfor %}
