@@ -23,3 +23,5 @@ links:
 ---
 
 Classic arcade game remade in 3D with hexagonal level tiles.
+
+<!--more-->

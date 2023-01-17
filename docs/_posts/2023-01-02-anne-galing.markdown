@@ -21,3 +21,5 @@ links:
 ---
 
 Match-3 game with avatar customization that's themed around a celebrity.
+
+<!--more-->

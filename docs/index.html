@@ -49,6 +49,9 @@ layout: default
   .entry-content > p {
     margin-bottom: 0;
   }
+  .accordion-body > ul {
+    margin-bottom: 0;
+  }
 </style>
 <nav class="navbar fixed-top bg-dark-subtle">
   <div class="container-xl">
@@ -88,14 +91,27 @@ layout: default
       <h4 class="pt-1">{{post.title}}</h4>
       <div><i class="bi bi-calendar4-event"></i> Released {{post.year}}</div>
       <div><i class="bi bi-briefcase"></i> <strong>{{post.role}}</strong> at {{post.company}}</div>
-      <div class="entry-content py-2">
-        {{post.content}}
+      <div class="entry-content pt-2">
+        {{post.excerpt}}
+        {% assign content = post.content | remove: post.excerpt %}
+        {% if content.size > 12 %}
+        <div class="accordion accordion-flush mt-2" id="accordion-flush-{{forloop.index}}">
+          <div class="accordion-item">
+            <button class="accordion-button p-2 border border-primary-subtle rounded-1 collapsed text-bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-{{forloop.index}}" aria-expanded="false" aria-controls="flush-collapse-{{forloop.index}}">
+              <small>My contributions to the project in detail...</small>
+            </button>
+            <div id="flush-collapse-{{forloop.index}}" class="accordion-collapse collapse" data-bs-parent="#accordion-flush-{{forloop.index}}">
+              <div class="accordion-body p-2">{{content}}</div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
       </div>
-      <div class="hstack gap-3 py-2">
+      <div class="hstack gap-3 pt-1 pb-2">
         <small><i class="bi bi-link-45deg"></i> Links:</small>
-      {% for link in post.links %}
-        <a href="{{ link.url }}" class="link-secondary text-decoration-none pe-2"><i class="bi bi-{{ link.icon | default: "link-45deg" }}" style="color:ghostwhite"></i> {{ link.label }}</a>
-      {% endfor %}
+        {% for link in post.links %}
+          <a href="{{ link.url }}" class="link-secondary text-decoration-none pe-2"><i class="bi bi-{{ link.icon | default: "link-45deg" }}" style="color:ghostwhite"></i> {{ link.label }}</a>
+        {% endfor %}
       </div>
       <div>
         {% for tag in post.tags %}

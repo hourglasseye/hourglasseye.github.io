@@ -30,3 +30,5 @@ links:
 Defense game with fun weapons and items.
 
 4.7 <i markdown="0" class="bi bi-star-fill" style="color:gold"></i> with 1M+ downloads on Play Store.
+
+<!--more-->

@@ -20,3 +20,5 @@ links:
 ---
 
 An idle game with incremental progression and one-handed gameplay.
+
+<!--more-->

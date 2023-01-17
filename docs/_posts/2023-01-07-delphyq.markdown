@@ -23,4 +23,14 @@ links:
   url: https://www.youtube.com/watch?v=WyATX2cfBk0
 ---
 
-Real-time tactics game with pause mechanics that allow you to execute handplaced strategies.
+Real-time tactics game with pause mechanics that allow you to execute handplaced strategies with a squad of inflitration specialists. I worked on the game's mission preview screen, tutorial system, enemy reinforcements, editor tools and debugging tools.
+
+<!--more-->
+
+Being a latecomer to the Delphyq project, I took on the role of a generalist - I provided support for the rest of the team as well as contributed to the following features (among other things):
+* **Mission preview screen** - let's the player place pins to plan the route they will take for a mission. This screen also allows them to determine the spawning position of their squad pre-"hack" certain elements in the level (like doors and consoles) to make their route easier as their squad traverses the level.
+* **Tutorial system** - allows any designer or programmer to script a sequence of changes to objects in the game without having to touch code. I made use of NodeCanvas behavior trees so that anyone editing the tutorial can make changes to the sequence of tutorial events with ease.
+* **Enemy reinforcements** - spawns waves of enemies periodically. I created configuration files that will allow a designer to set spawning intervals and to set up "spawn wave archetypes" that will determine the kind of enemies that would spawn with each wave, as well as a level setup tool to determine the spawn location of enemy reinforcements.
+* **Squad spawning locations and positioning** - a tool that will allow a designer to hand-place the spawning position of each squad member when a player's squad is spawned at the start of a mission. It includes gizmos/handles that a designer can just drag from within a scene to change the position and placement of each spawn position.
+* **Scene setup debugging and balancing tools** - a visual debugging tool that I made to help designers balance/optimize enemy placement, the amount and placement of defensive cover in the scene, as well as a scoring mechanism for how vulnerable a player's squad member will be in each defensive cover location.
+* **Runtime gizmo renderer** - a way for our programmers to render gizmos in builds. Normally, Unity only renders gizmos in the editor, but I wrote an API that serves as a replacement for Unity's Gizmos API that renders lines and wireframe shapes using Vectrosity.
