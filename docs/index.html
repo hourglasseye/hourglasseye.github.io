@@ -3,7 +3,6 @@ layout: default
 ---
 
 <style>
-  .entry {  }
   .entry-image-container {
     position: relative;
   }
@@ -45,7 +44,6 @@ layout: default
   .entry:hover .entry-overlay {
     opacity: 1;
   }
-  .entry-content {  }
   .entry-content > p {
     margin-bottom: 0;
   }
@@ -55,7 +53,7 @@ layout: default
 </style>
 <nav class="navbar fixed-top bg-dark-subtle">
   <div class="container-xl">
-    <a class="navbar-brand" href="#"><i class="bi bi-controller fs-3"></i> {{ site.title }}</a>
+    <a class="navbar-brand text-decoration-none" href="#"><i class="bi bi-controller fs-3"></i> {{ site.title }}</a>
   </div>
 </nav>
 <div class="container-xl p-5 mb-4 text-center">
@@ -100,14 +98,14 @@ layout: default
           <small>Click for more details <i class="bi bi-chevron-double-right"></i></small>
         </button>
         <div class="modal" id="modal-{{forloop.index}}" tabindex="-1" aria-labelledby="modal-label-{{forloop.index}}" aria-hidden="true">
-          <div class="modal-dialog modal-fullscreen">
+          <div class="modal-dialog modal-xl">
             <div class="modal-content">
               <div class="modal-header">
                   <h1 class="modal-title fs-5" id="modal-label-{{forloop.index}}">My Contributions to {{post.title}}</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
-                <div class="container">{{content}}</div>
+              <div class="modal-body fs-5">
+                {{content}}
               </div>
             </div>
           </div>
