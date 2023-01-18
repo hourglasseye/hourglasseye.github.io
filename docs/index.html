@@ -62,15 +62,16 @@ layout: default
   <h1 class="display-5 fw-bold">Justin's Portfolio</h1>
   <p class="fs-4">I'm a programmer who enjoys making games for a living!</p>
   <div class="hstack gap-3 justify-content-center">
-    <a class="link-secondary" href="https://www.linkedin.com/in/justinrichardmata/">
+    <a class="link-primary-subtle" href="https://www.linkedin.com/in/justinrichardmata/">
       <i class="bi bi-linkedin fs-3"></i>
     </a>
-    <a class="link-secondary" href="https://github.com/hourglasseye/">
+    <a class="link-primary-subtle" href="https://github.com/hourglasseye/">
       <i class="bi bi-github fs-3"></i>
     </a>
   </div>
 </div>
 <div class="container-xl">
+  {% assign default_link_icon = "link-45deg" %}
   {% for post in paginator.posts %}
   <div class="row entry mb-3">
     <div class="col-sm-4">
@@ -95,13 +96,19 @@ layout: default
         {{post.excerpt}}
         {% assign content = post.content | remove: post.excerpt %}
         {% if content.size > 12 %}
-        <div class="accordion accordion-flush mt-2" id="accordion-flush-{{forloop.index}}">
-          <div class="accordion-item">
-            <button class="accordion-button p-2 border border-primary-subtle rounded-1 collapsed text-bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-{{forloop.index}}" aria-expanded="false" aria-controls="flush-collapse-{{forloop.index}}">
-              <small>My contributions to the project in detail...</small>
-            </button>
-            <div id="flush-collapse-{{forloop.index}}" class="accordion-collapse collapse" data-bs-parent="#accordion-flush-{{forloop.index}}">
-              <div class="accordion-body p-2">{{content}}</div>
+        <button type="button" class="btn btn-link text-decoration-none mt-2 p-0" data-bs-toggle="modal" data-bs-target="#modal-{{forloop.index}}">
+          <small>Click for more details <i class="bi bi-chevron-double-right"></i></small>
+        </button>
+        <div class="modal" id="modal-{{forloop.index}}" tabindex="-1" aria-labelledby="modal-label-{{forloop.index}}" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="modal-label-{{forloop.index}}">My Contributions to {{post.title}}</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">{{content}}</div>
+              </div>
             </div>
           </div>
         </div>
@@ -110,7 +117,11 @@ layout: default
       <div class="hstack gap-3 pt-1 pb-2">
         <small><i class="bi bi-link-45deg"></i> Links:</small>
         {% for link in post.links %}
-          <a href="{{ link.url }}" class="link-secondary text-decoration-none pe-2"><i class="bi bi-{{ link.icon | default: "link-45deg" }}" style="color:ghostwhite"></i> {{ link.label }}</a>
+          <a href="{{ link.url }}" class="link-primary-subtle text-decoration-none pe-2">
+            <small>
+              <i class="bi bi-{{ link.icon | default: default_link_icon }}" style="color:ghostwhite"></i> {{ link.label }}
+            </small>
+          </a>
         {% endfor %}
       </div>
       <div>
