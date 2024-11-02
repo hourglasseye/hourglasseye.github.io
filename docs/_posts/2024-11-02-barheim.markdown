@@ -1,0 +1,99 @@
+---
+layout: post
+title: "Barheim"
+image: /images/barheim.jpg
+anim: /images/barheim.gif
+blurb: ""
+role: "Lead Game Engineer"
+company: "Dusk Wave Arts"
+year: 2023
+tags:
+- <i class="bi bi-pc-display"></i> Desktop
+- 3D
+- C#
+- <i class="bi bi-unity"></i> Unity
+links:
+-
+  icon: steam
+  label: Store Page
+  url: https://store.steampowered.com/app/2980970/BARHEIM/
+-
+  icon: youtube
+  label: Trailer
+  url: https://www.youtube.com/watch?v=984dI0LupqA
+---
+
+A time management game about mixing drinks and then firing the drinks at your customers with a cannon. I was the lead engineer for this project!
+
+<!--more-->
+
+<div class="container-xl p-4 mb-3 fs-5 bg-dark-subtle rounded">
+  <div class="row p-1">
+      <div class="col-lg-4">
+        <strong>Role</strong>
+        <p>{{page.role}}</p>
+        <strong>Tools</strong>
+        <p>
+          <span class="badge text-bg-secondary"><i class="bi bi-unity"></i> Unity3D</span>
+          <span class="badge text-bg-secondary">PlasticSCM (UVCS)</span>
+          <span class="badge text-bg-secondary">Azure DevOps</span>
+          <span class="badge text-bg-secondary">Jenkins</span>
+          <span class="badge text-bg-secondary">FMOD</span>
+          <span class="badge text-bg-secondary">Articy</span>
+          <span class="badge text-bg-secondary">Miro</span>
+        </p>
+      </div>
+      <div class="col-lg-8">
+        <strong>Involvement Summary</strong>
+        <p>I was the lead engineer and was accountable for the technical implementation of the game in an engineering team of four people (including myself).</p>
+      </div>
+  </div>
+</div>
+
+---
+
+##### Engineering Management
+
+One of the primary goals was to have a game within a year which I accomplished by staying on top of scope negotiation, feasibility discussions, risk identification, task estimation and resource allocation within my department.
+
+I also made sure that each member of the engineering team would get the opportunity to work on core gameplay, and have their achievements visible to the reast of the project members.
+
+##### Initial Architecture Planning
+
+During pre-production, I took point on planning the initial architecture for the game using UML - the primary purpose was to get a better sense of what the scope was and how to best divide the workload among members of the engineering team. The UML diagrams I set up were mostly guidelines as I wanted my teammates to have as much autonomy as possible.
+
+##### Defining Done-ness
+
+Defining what "done" meant for tasks was important for maintaining quality and managing expectations. This includes things like:
+
+1. Setting up automated tests
+2. Writing API documentation
+3. Writing README files for tools
+4. Early alignment check with the design team
+5. QA testing
+
+##### Build Automation
+
+I set up a Jenkins build server that was responsible for running our automated tests, preparing builds, deploying the builds to our company SharePoint, and sending notifications over Slack.
+
+##### Re-usable Code Libraries
+
+I set up several code libraries that are accessible to Dusk Wave Arts employees via the Unity Package Manager. Here are some of my favorites:
+
+* Bootstrapper - an extensible utility for easily and explicitly setting up the order of initialization for any system. Internally, it's an abstraction of `[RuntimeInitializeOnLoadMethod]`.
+* Spatial Query - allows us to set up "zones" and be able to track visitors in each zone with ease. Also includes helper functions for field of vision and line of sight checks.
+* Service Locator - a simple service locator implementation, super handy!
+* Update Manager - a service that allows us to easily manage the pause states and update timing of groups/categories of objects.
+
+##### Some Hands-on Work
+
+Here are some of the features I worked on directly:
+
+* The Brewcannon's cylinder
+    * Animation utility for controlling the way the cannon's cylinder rotates.
+    * The number chambers on the cannon change as the cannon is upgraded, and the color of each chamber changes depending on what gets loaded into them.
+* FTUE stuff, tutorials.
+* A Python script for procedurally generating input prompt glyphs.
+* Build profiles where each profile contains a custom set of Script Define Symbols and can be selected via CLI.
+
+<img src="/images/barheim.gif" class="img-fluid">

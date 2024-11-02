@@ -3,11 +3,11 @@ layout: post
 title: "Anne Galing!"
 image: /images/anne-galing.jpg
 anim: /images/anne-galing.gif
-role: "Senior Game Engineer"
+role: "Game Engineer"
 company: "Altitude Games"
 year: 2015
 tags:
-- Match-3
+- <i class="bi bi-phone"></i>Mobile
 - 2D
 - C#
 - <i class="bi bi-unity"></i> Unity

@@ -7,7 +7,7 @@ role: "Lead Game Developer"
 company: "Gonzo Games"
 year: 2014
 tags:
-- Puzzle Arcade
+- <i class="bi bi-pc-display"></i> Desktop
 - 3D
 - C#
 - <i class="bi bi-unity"></i> Unity

@@ -8,7 +8,7 @@ role: "Senior Game Developer"
 company: "Dusk Wave Arts"
 year: 2021
 tags:
-- Combat Tactics
+- <i class="bi bi-pc-display"></i> Desktop
 - 3D
 - C#
 - <i class="bi bi-unity"></i> Unity
@@ -29,24 +29,22 @@ Real-time tactics game with pause mechanics that allow you to execute handplaced
 
 <div class="container-xl p-4 mb-3 fs-5 bg-dark-subtle rounded">
   <div class="row p-1">
-    <div class="row">
       <div class="col-lg-4">
         <strong>Role</strong>
-        <p>Senior Game Programmer</p>
+        <p>{{page.role}}</p>
         <strong>Tools</strong>
         <p>
-          <span class="badge text-bg-secondary">Unity3D</span>
+          <span class="badge text-bg-secondary"><i class="bi bi-unity"></i> Unity3D</span>
           <span class="badge text-bg-secondary">UniRx</span>
           <span class="badge text-bg-secondary">BehaviorDesigner</span>
           <span class="badge text-bg-secondary">Vectrosity</span>
-          <span class="badge text-bg-secondary">Git</span>
+          <span class="badge text-bg-secondary"><i class="bi bi-git"></i> Git</span>
         </p>
       </div>
       <div class="col-lg-8">
         <strong>Involvement Summary</strong>
         <p>Coming in late to the Delphyq project, I took on the role of a generalist and provided support for the rest of the team. I was also responsible for implementing the features for the game that you will see listed below.</p>
       </div>
-    </div>
   </div>
 </div>
 <hr/>
