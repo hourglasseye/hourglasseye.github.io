@@ -23,7 +23,7 @@ links:
   url: https://www.youtube.com/watch?v=984dI0LupqA
 ---
 
-A time management game about mixing drinks and then firing the drinks at your customers with a cannon. I was the lead engineer for this project!
+A time management game with a bit of a defense/bulletstorm (beerstorm?) twist. Mix up some drinks, load them into a cannon, then blast your customers with their orders - which I suppose gives a new meaning to getting blasted, heh 🍺!
 
 <!--more-->
 
@@ -45,9 +45,12 @@ A time management game about mixing drinks and then firing the drinks at your cu
       </div>
       <div class="col-lg-8">
         <strong>Involvement Summary</strong>
-        <p>I was the lead engineer and was accountable for the technical implementation of the game in an engineering team of four people (including myself).</p>
+        <p>I was accountable for the technical planning and implementation of the game in an engineering team of four people (including myself).</p>
       </div>
   </div>
+</div>
+<div class="d-flex justify-content-center">
+  <img src="/images/barheim.gif" class="img-fluid">
 </div>
 
 ---
@@ -95,5 +98,3 @@ Here are some of the features I worked on directly:
 * FTUE stuff, tutorials.
 * A Python script for procedurally generating input prompt glyphs.
 * Build profiles where each profile contains a custom set of Script Define Symbols and can be selected via CLI.
-
-<img src="/images/barheim.gif" class="img-fluid">

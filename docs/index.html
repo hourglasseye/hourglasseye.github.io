@@ -30,6 +30,15 @@ layout: default
             drop-shadow(-1px 0 0 white)
             drop-shadow(0 -1px 0 white);
   }
+  .entry-play-circle {
+    position: absolute;
+    left: 12px;
+    bottom: 4px;
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    color: white;
+  }
   .entry-overlay {
     position: absolute;
     top: 0;
@@ -77,6 +86,7 @@ layout: default
         <img src="{{post.image | relative_url}}" class="img-fluid entry-image">
         <img src="{{post.accolade | relative_url}}" class="img-fluid entry-accolade">
         {% if post.anim %}
+        <i class="bi bi-play-circle entry-play-circle"></i>
         <img src="{{post.anim | relative_url}}" class="img-fluid entry-overlay">
         {% endif %}
         {% if post.video %}
