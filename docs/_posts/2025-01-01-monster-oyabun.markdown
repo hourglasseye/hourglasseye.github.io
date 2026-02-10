@@ -19,21 +19,21 @@ This is a tactics game where you control one character with highly customizable 
 ##### Action Point System
 The player and all the enemies have 3 action points per turn, but the player has the ability to save their action points for later!
 
-![Image](/images/monster-oyabun-demo1.gif)
+<img src="/images/monster-oyabun-demo1.gif" class="img-fluid">
 
 ---
 
 #### Ability Customization
 You can customize your abilities - what the ability is, what the effects are, and what curses it applies.
 
-![Image](/images/monster-oyabun-demo3.gif)
+<img src="/images/monster-oyabun-demo3.gif" class="img-fluid">
 
 ---
 
 #### Damage Types and Weaknesses
 There are different damage types, each effective against different defense types.
 
-![Image](/images/monster-oyabun-demo4.gif)
+<img src="/images/monster-oyabun-demo4.gif" class="img-fluid">
 
 ---
 
@@ -41,32 +41,32 @@ There are different damage types, each effective against different defense types
 The player can set up multiple loadouts and be able to switch through each of them through transformations!
 Each transformation has passive bonuses that can change the player's playstyle a bit.
 
-![Image](/images/monster-oyabun.gif)
+<img src="/images/monster-oyabun.gif" class="img-fluid">
 
 ---
 
 #### Curse Mixing Effects
 You can apply curses on the enemies. When two different curses are applied, they get consumed and a special effect - unique to the combination - is triggered!
 
-![Image](/images/monster-oyabun-demo2.gif)
+<img src="/images/monster-oyabun-demo2.gif" class="img-fluid">
 
 ---
 
 #### Minion Summoning
 The player can summon minions whose attacks can have customizable effects.
 
-![Image](/images/monster-oyabun-demo6.gif)
+<img src="/images/monster-oyabun-demo6.gif" class="img-fluid">
 
 ---
 
 ### Enemy Behavior and Pathfinding
 As with any tactics game, my game has a variety of enemies with different behaviors and priorities.
 
-![Image](/images/monster-oyabun-demo7.gif)
+<img src="/images/monster-oyabun-demo7.gif" class="img-fluid">
 
 ---
 
 #### Hex Tile Shape Editor
 I have a system for setting up shapes and a custom level editor for defining what's in each level.
 
-![Image](/images/monster-oyabun-demo5.gif)
+<img src="/images/monster-oyabun-demo5.gif" class="img-fluid">
