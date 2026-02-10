@@ -12,6 +12,7 @@ tags:
 - 3D
 - C#
 - <i class="bi bi-unity"></i> Unity
+- fmod
 links:
 -
   icon: steam

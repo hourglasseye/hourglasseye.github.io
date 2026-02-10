@@ -6,13 +6,12 @@ anim: /images/pitchfork-perfect.gif
 blurb: ""
 role: "Game Director | Programmer | Game Designer"
 company: "Kill Your Darlings"
-year: 2026
 tags:
 - <i class="bi bi-pc-display"></i> Desktop
 - 2D
 - C#
 - <i class="bi bi-unity"></i> Unity
-- FMOD
+- fmod
 links:
 -
   icon: youtube

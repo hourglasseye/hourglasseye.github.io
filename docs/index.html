@@ -107,8 +107,12 @@ layout: default
     </div>
     <div class="col-sm-8">
       <h4 class="pt-1">{{post.title}}</h4>
+      {% if post.year %}
       <div><i class="bi bi-calendar4-event"></i> Released {{post.year}}</div>
-      <div><i class="bi bi-briefcase"></i> <strong>{{post.role}}</strong> at {{post.company}}</div>
+      {% else %}
+      <div><i class="bi bi-calendar4-event"></i> Work in Progress</div>
+      {% endif %}
+      <div><i class="bi bi-briefcase"></i> <strong>{{post.role}}</strong>{% if post.company %} at {{post.company}}{% endif %}</div>
       <div class="entry-content pt-2">
         {{post.excerpt}}
         {% assign content = post.content | remove: post.excerpt %}
@@ -131,6 +135,7 @@ layout: default
         </div>
         {% endif %}
       </div>
+      {% if post.links %}
       <div class="hstack gap-3 pt-1 pb-2">
         <small><i class="bi bi-link-45deg"></i> Links:</small>
         {% for link in post.links %}
@@ -141,6 +146,7 @@ layout: default
           </a>
         {% endfor %}
       </div>
+      {% endif %}
       <div>
         {% for tag in post.tags %}
           <span class="badge text-bg-secondary">{{ tag }}</span>
